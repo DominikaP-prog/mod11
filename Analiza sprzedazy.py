@@ -7,8 +7,8 @@ from dash import html, dcc, Input, Output
 import plotly.express as px
 
 # 🔽 Ścieżki do plików CSV — ZMIEŃ jeśli potrzebujesz
-transactions_path = r"C:\Users\dpiekutowska\OneDrive - OSGE\Pulpit\Kodilla DoPi\11_projekt\Kanały sprzedaży\db\transactions\transactions.csv"
-customers_path = r"C:\Users\dpiekutowska\OneDrive - OSGE\Pulpit\Kodilla DoPi\11_projekt\Kanały sprzedaży\db\transactions\customers.csv"
+transactions_path = "transactions/transactions-2016.csv"
+customers_path = "transactions/customers.csv"
 
 # 🔽 Wczytanie danych
 transactions = pd.read_csv(transactions_path)
@@ -86,4 +86,4 @@ def update_dashboard(store_type):
 
 # 🔽 Uruchomienie aplikacji
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)
